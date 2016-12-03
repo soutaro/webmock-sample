@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-04/hyper-schema",
+  "definitions": {
+    "user": {
+      "$schema": "http://json-schema.org/draft-04/hyper-schema",
+      "id": "schemata/user",
+      "title": "User",
+      "type": [
+        "object"
+      ],
+      "required": ["id"],
+      "definitions": {
+        "id": {
+          "description": "unique identifier of user",
+          "example": "01234567-89ab-cdef-0123-456789abcdef",
+          "format": "uuid",
+          "readOnly": true,
+          "type": [
+            "string"
+          ]
+        },
+        "name": {
+          "description": "unique name of user",
+          "example": "murajun1978",
+          "readOnly": false,
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "links": [
+        {
+          "description": "Info for existing user.",
+          "href": "/users/{(%23%2Fdefinitions%2Fuser%2Fdefinitions%2Fid)}",
+          "method": "GET",
+          "rel": "self",
+          "title": "Info"
+        },
+        {
+          "description": "List existing users.",
+          "href": "/users",
+          "method": "GET",
+          "rel": "instances",
+          "title": "List"
+        }
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/user/definitions/id"
+        },
+        "name": {
+          "$ref": "#/definitions/user/definitions/name"
+        }
+      }
+    }
+  },
+  "properties": {
+    "user": {
+      "$ref": "#/definitions/user"
+    }
+  },
+  "type": [
+    "object"
+  ],
+  "description": "A schema for a small example API.",
+  "links": [
+    {
+      "href": "http://localhost:8080",
+      "rel": "self"
+    }
+  ],
+  "title": "Example API"
+}
