@@ -1,0 +1,11 @@
+class FakeRack < Sinatra::Base
+  def self.app_file: () -> untyped
+
+  def self.app_file=: (untyped val) -> untyped
+
+  def self.app_file?: () -> untyped
+
+  private
+
+  def json_response: (untyped response_code, String file_name) -> String
+end

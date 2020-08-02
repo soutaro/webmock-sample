@@ -1,58 +1,66 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.0.0.1)
+    activesupport (6.0.3.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (~> 0.7)
+      i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.5.0)
-      public_suffix (~> 2.0, >= 2.0.2)
-    concurrent-ruby (1.0.2)
+      zeitwerk (~> 2.2, >= 2.2.2)
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
+    concurrent-ruby (1.1.6)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     erubis (2.7.0)
-    faraday (0.10.0)
+    faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
-    faraday_middleware (0.10.1)
-      faraday (>= 0.7.4, < 1.0)
-    hashdiff (0.3.1)
-    i18n (0.7.0)
-    jdoc (0.4.2)
+    faraday_middleware (1.0.0)
+      faraday (~> 1.0)
+    hashdiff (1.0.1)
+    i18n (1.8.5)
+      concurrent-ruby (~> 1.0)
+    jdoc (0.4.3)
       activesupport
       erubis
       json_schema
       rack
       redcarpet
-    json_schema (0.15.0)
-    minitest (5.10.1)
-    multipart-post (2.0.0)
-    prmd (0.12.0)
+    json_schema (0.20.9)
+    minitest (5.14.1)
+    multipart-post (2.1.1)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    prmd (0.13.0)
       erubis (~> 2.7)
       json_schema (~> 0.3, >= 0.3.1)
-    public_suffix (2.0.4)
-    rack (1.6.5)
+    public_suffix (4.0.5)
+    rack (2.2.3)
     rack-json_schema (1.5.2)
       erubis
       jdoc (>= 0.1.4)
       json_schema (~> 0.2)
       rack
-    rack-protection (1.5.3)
+    rack-protection (2.0.8.1)
       rack
-    redcarpet (3.3.4)
-    safe_yaml (1.0.4)
-    sinatra (1.4.7)
-      rack (~> 1.5)
-      rack-protection (~> 1.4)
-      tilt (>= 1.3, < 3)
-    thread_safe (0.3.5)
-    tilt (2.0.5)
-    tzinfo (1.2.2)
+    rbs (0.6.0)
+    redcarpet (3.5.0)
+    ruby2_keywords (0.0.2)
+    safe_yaml (1.0.5)
+    sinatra (2.0.8.1)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.8.1)
+      tilt (~> 2.0)
+    thread_safe (0.3.6)
+    tilt (2.0.10)
+    tzinfo (1.2.7)
       thread_safe (~> 0.1)
-    webmock (2.1.0)
+    webmock (3.8.3)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
-      hashdiff
+      hashdiff (>= 0.4.0, < 2.0.0)
+    zeitwerk (2.4.0)
 
 PLATFORMS
   ruby
@@ -62,11 +70,9 @@ DEPENDENCIES
   faraday_middleware
   prmd
   rack-json_schema
+  rbs
   sinatra
   webmock
 
-RUBY VERSION
-   ruby 2.3.3p222
-
 BUNDLED WITH
-   1.13.6
+   2.1.4
