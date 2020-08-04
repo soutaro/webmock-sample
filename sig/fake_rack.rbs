@@ -9,3 +9,21 @@ class FakeRack < Sinatra::Base
 
   def json_response: (untyped response_code, String file_name) -> String
 end
+
+module Sinatra
+  class Base
+    def self.new: () -> Wrapper
+  end
+
+  class Wrapper
+    def initialize: (untyped stack, Base `instance`) -> void
+
+    def settings: () -> untyped
+
+    def helpers: () -> untyped
+
+    def call: () -> untyped
+
+    def inspect: () -> String
+  end
+end
